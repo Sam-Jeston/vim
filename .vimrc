@@ -41,3 +41,5 @@ let g:syntastic_check_on_wq = 0
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
 
+# Compile on save, this isnt quite right..
+# autocmd BufWritePost,FileWritePost *.ts :silent tsc

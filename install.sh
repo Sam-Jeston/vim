@@ -18,16 +18,19 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cp monokai.vim ~/.vim/colors/monokai.vim
 
 # Now the dependencies
+cd ~/.vim/bundle
+git clone git@github.com:kien/ctrlp.vim.git
+git clone git@github.com:Raimondi/delimitMate.git
+git clone git@github.com:scrooloose/nerdcommenter.git
+git clone git@github.com:scrooloose/nerdtree.git
+git clone git@github.com:vim-syntastic/syntastic.git
+git clone git@github.com:leafgarland/typescript-vim.git
+git clone git@github.com:vim-airline/vim-airline.git
+git clone git@github.com:alvan/vim-closetag.git
+git clone git@github.com:tpope/vim-sensible.git
 
-git clone git@github.com:kien/ctrlp.vim.git ~/.vim/bundle
-git clone git@github.com:Raimondi/delimitMate.git ~/.vim/bundle
-git clone git@github.com:scrooloose/nerdcommenter.git ~/.vim/bundle
-git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle
-git clone git@github.com:vim-syntastic/syntastic.git ~/.vim/bundle
-git clone git@github.com:Quramy/tsuquyomi.git ~/.vim/bundle
-git clone git@github.com:leafgarland/typescript-vim.git ~/.vim/bundle
-git clone git@github.com:vim-airline/vim-airline.git ~/.vim/bundle
-git clone git@github.com:alvan/vim-closetag.git ~/.vim/bundle
-git clone git@github.com:Shougo/vimproc.vim.git ~/.vim/bundle
-git clone git@github.com:tpope/vim-sensible.git ~/.vim/bundle
+git clone git@github.com:Shougo/vimproc.vim.git
+cd ~/.vim/bundle/vimproc.vim && make
 
+cd ~/.vim/bundle
+git clone git@github.com:Quramy/tsuquyomi.git
