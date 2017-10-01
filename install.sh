@@ -34,3 +34,7 @@ cd ~/.vim/bundle/vimproc.vim && make
 
 cd ~/.vim/bundle
 git clone git@github.com:Quramy/tsuquyomi.git
+
+# Rust
+git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
+git clone --depth=1 https://github.com/racer-rust/vim-racer.git ~/.vim/bundle/vim-racer

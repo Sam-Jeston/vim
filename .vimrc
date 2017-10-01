@@ -13,8 +13,10 @@ let g:ctrlp_map = '<c-p>'
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-map <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+
+" This needs to be configured to only be called for js, ts or html files
+" map <c-f> :call JsBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 
 let g:config_Beautifier = {}
 let g:config_Beautifier['js'] = {}
@@ -40,3 +42,12 @@ let g:syntastic_check_on_wq = 0
 
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
+
+" All Vim stuff. Needs RustFmt and Racer
+let g:rustfmt_autosave = 1
+let g:syntastic_rust_checkers = ['rustc']
+let g:rustfmt_command = "cargo fmt -- "
+let g:rustfmt_fail_silently = 1 " else rustfmt will bring cursor to bottom of window on syntax failure"
+set hidden
+let g:racer_cmd = "/Users/samjeston/.cargo/bin/racer" " This is the mac location"
+let g:racer_experimental_completer = 1 " An experimental option right now
